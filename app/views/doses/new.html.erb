@@ -1,0 +1,14 @@
+<h1>Doses#new</h1>
+<p>Find me in app/views/doses/new.html.erb</p>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+
+<% f.error_notification message: 'Something went wrong' %>
+
+<%= f.association :ingredient %>
+
+<%= f.input :description %>
+
+<%= f.submit "Add an ingredient", class: "btn btn-primary"%>
+
+<% end %>
